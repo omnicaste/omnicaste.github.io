@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OmniCast</title>
+    <link rel="icon" href="images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <!-- HLS.js library for streaming M3U8 links -->
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar: Channel Search & Channel List -->
+        <aside class="sidebar">
+            <h2>OmniCast</h2>
+            
+            <div class="status-box" id="status-message">Loading playlist...</div>
+
+            <input type="text" id="search-input" placeholder="Search channels..." disabled>
+
+            <div class="channel-list-container">
+                <ul id="channel-list">
+                    <li class="placeholder-text">Fetching live channels...</li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Content: Video Player -->
+        <main class="player-container">
+            <div class="now-playing" id="now-playing-title">Select a channel to play</div>
+            <div class="video-wrapper">
+                <video
+  id="video-player"
+  controls
+  poster="images/player-poster.png">
+</video>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
